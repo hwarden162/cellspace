@@ -30,7 +30,7 @@ class SpatialDataSet:
         if not len(col_names) == data.shape[1]:
             raise ValueError("col_names does not match the dimension of the data.")
         if not isinstance(chunk_size, int):
-            raise ValueError("chunk_size should be an integer.")
+            raise TypeError("chunk_size should be an integer.")
         if not chunk_size > 0:
             raise ValueError("chunk_size should be a positive integer.")
         self._data = data.rechunk((chunk_size, -1))
