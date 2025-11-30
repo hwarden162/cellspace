@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "cellspace"
+version = "0.0.1"
+description = "Spatially analyse morphological profiles."
+authors = ["Hugh Warden <hugh.warden@outlook.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+dask = "^2025.11.0"
+dask-ml = "^2025.1.0"
+numpy = "^2.3.5"
+pandas = "^2.3.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "dask-stubs (>=0.1.6,<0.2.0)",
+    "isort (>=7.0.0,<8.0.0)",
+    "mypy (>=1.19.0,<2.0.0)",
+    "flake8 (>=7.3.0,<8.0.0)",
+    "black (>=25.11.0,<26.0.0)",
+    "pytest (>=9.0.1,<10.0.0)"
+]
